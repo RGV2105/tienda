@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decoraciones — Principal</title>
+  <style>
+    :root{
+      --vino:#6b0f1a; /* color vino / conchevino */
+      --negro:#0b0b0b;
+      --blanco:#ffffff;
+      --gris:#f4f4f6;
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(180deg,var(--gris),#fff);
+      color:var(--negro);
+      -webkit-font-smoothing:antialiased;
+    }
+    header{
+      position:sticky;top:0;z-index:40;
+      background:rgba(255,255,255,0.95);
+      backdrop-filter:blur(6px);
+      border-bottom:1px solid rgba(11,11,11,0.06);
+    }
+    .nav-container{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;display:inline-grid;place-items:center;background:var(--vino);color:var(--blanco);font-weight:700}
+    .site-title{font-size:1.05rem;font-weight:700}
+    nav ul{display:flex;gap:12px;list-style:none;padding:0;margin:0;align-items:center}
+    nav a{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--negro);font-weight:600}
+    nav a:hover{background:rgba(107,15,26,0.08)}
+    .actions{display:flex;gap:8px;align-items:center}
+    .btn{background:var(--vino);color:var(--blanco);border:none;padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:600}
+    .btn.secondary{background:transparent;color:var(--vino);border:1px solid rgba(107,15,26,0.12)}
+
+    /* mobile */
+    .hamburger{display:none;padding:8px;border-radius:8px;border:none;background:transparent}
+    @media (max-width:880px){
+      nav ul{display:none;position:absolute;left:20px;top:72px;flex-direction:column;background:var(--blanco);padding:12px;border-radius:12px;box-shadow:0 8px 28px rgba(11,11,11,0.08)}
+      .hamburger{display:block}
+    }
+
+    /* Hero */
+    .hero{max-width:1200px;margin:28px auto;padding:20px;display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start}
+    .hero-card{background:var(--blanco);padding:18px;border-radius:16px;box-shadow:0 8px 30px rgba(11,11,11,0.06)}
+    .hero-left h1{margin:0 0 8px 0;font-size:1.7rem}
+    .hero-left p{margin:0 0 16px 0;color:#444}
+    .upload-area{height:280px;border-radius:12px;border:2px dashed rgba(11,11,11,0.06);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;background:linear-gradient(180deg, #fff, #fafafa)}
+    .upload-area img{max-width:100%;max-height:100%;border-radius:8px;object-fit:cover}
+    .small-info{font-size:0.9rem;color:#666}
+
+    /* Sections grid */
+    .sections{max-width:1200px;margin:10px auto;padding:0 20px 80px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:var(--blanco);border-radius:12px;padding:14px;box-shadow:0 6px 22px rgba(11,11,11,0.04);display:flex;flex-direction:column;gap:12px}
+    .card h3{margin:0}
+    .card p{margin:0;color:#666;font-size:0.95rem}
+    .card .thumb{height:120px;border-radius:10px;overflow:hidden;background:linear-gradient(90deg,var(--vino),#c33);display:flex;align-items:center;justify-content:center;color:var(--blanco);font-weight:700}
+    .card a{margin-top:auto;display:inline-block;padding:8px 10px;border-radius:8px;text-decoration:none;background:var(--vino);color:var(--blanco);font-weight:700}
+
+    footer{max-width:1200px;margin:40px auto;padding:20px;color:#666;text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <div class="logo">D</div>
+        <div>
+          <div class="site-title">DIPTE</div>
+          <div style="font-size:0.82rem;color:#666">Diseños y eventos</div>
+        </div>
+      </div>
+
+      <nav>
+        <button class="hamburger" aria-label="Abrir menú" onclick="toggleMenu()">☰</button>
+        <ul id="navLinks">
+          <li><a href="eventos.html">Eventos</a></li>                  
+          <li><a href="detalles.html">Detalles</a></li>
+          <li><a href="desayunos.html">Desayuno</a></li>
+          
+          <li><a href="flores.html">Flores</a></li>
+        </ul>
+      </nav>
+
+      
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-card hero-left">
+        <h1>Bienvenido a DIPTE Creaciones-detalles y eventos</h1>
+        <p>Inspírate con nuestros eventos y arreglos.</p>
+ <img src="Picsart_24-11-22_13-55-02-221.png " 
+ alt="Logo DIPTE Creaciones" 
+     style="max-width:60%; border-radius:100px;">
+      </div>
+      <aside class="hero-card">
+          <img src="Picsart_25-03-30_09-38-18-337.jpg" 
+     alt="Logo DIPTE Creaciones" 
+     style="max-width:100%; border-radius:8px;">
+
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="secciones" class="sections">
+      <article class="card">
+        <div class="thumb">EVENTOS</div>
+        <h3>Eventos</h3>
+        <p>Montajes para bodas, cumpleaños y más. Pulsa ver para ir a la página de eventos.</p>
+        <a href="eventos.html">Ir a Eventos</a>
+      </article>
+
+      <article class="card">
+        <div class="thumb">DET</div>
+        <h3>Detalles</h3>
+        <p>Accesorios, centros de mesa y detalles personalizados.</p>
+        <a href="detalles.html">Ir a Detalles</a>
+      </article>
+
+      <article class="card">
+        <div class="thumb">DES</div>
+        <h3>Desayuno</h3>
+        <p>Opciones de desayunos sorpresa y mesas de desayuno para eventos.</p>
+        <a href="desayunos.html">Ir a Desayuno</a>
+      </article>
+
+    
+
+      <article class="card">
+        <div class="thumb">FLO</div>
+        <h3>Flores</h3>
+        <p>Arreglos florales y ramos para cualquier ocasión.</p>
+        <a href="flores.html">Ir a Flores</a>
+      </article>
+
+     
+
+    <section id="contacto" style="max-width:1200px;margin:0 auto;padding:0 20px 60px">
+      <div style="background:var(--blanco);padding:18px;border-radius:12px;box-shadow:0 8px 26px rgba(11,11,11,0.05)">
+        <h3>Contacto rápido</h3>
+        <p class="small-info">Escribe tu mensaje y número de contacto.</p>
+        <form onsubmit="event.preventDefault();alert('Mensaje enviado (simulado)')" style="display:grid;gap:8px;margin-top:8px">
+          <input type="text" name="nombre" placeholder="Nombre" required style="padding:10px;border-radius:8px;border:1px solid #e7e7e7">
+          <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" style="padding:10px;border-radius:8px;border:1px solid #e7e7e7">
+          <textarea name="mensaje" placeholder="Tu mensaje" rows="3" style="padding:10px;border-radius:8px;border:1px solid #e7e7e7"></textarea>
+          <div style="display:flex;gap:8px">
+            <button class="btn" type="submit">Enviar</button>
+            <button class="btn secondary" type="reset">Limpiar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+   
+  </main>
+
+  <footer>
+    © <span id="year"></span> Decoraciones — Hecho con cariño
+  </footer>
+
+  <input id="imageInput" type="file" accept="image/*" style="display:none">
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function toggleMenu(){
+      const ul = document.getElementById('navLinks');
+      if(ul.style.display === 'flex') ul.style.display = 'none';
+      else ul.style.display = 'flex';
+    }
+
+    function agregarSeccion(){
+      const nombre = prompt('Nombre de la nueva sección (ej: Galería)');
+      if(!nombre) return;
+      const href = prompt('Archivo o enlace para la sección (ej: galeria.html o https://...)', '#');
+      const ul = document.getElementById('navLinks');
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = href || '#';
+      a.textContent = nombre;
+      li.appendChild(a);
+      ul.appendChild(li);
+      // show feedback
+      a.scrollIntoView({behavior:'smooth',block:'center'});
+    }
+
+    function openUpload(){
+      document.getElementById('imageInput').click();
+    }
+
+    const input = document.getElementById('imageInput');
+    input.addEventListener('change', (e)=>{
+      const file = e.target.files[0];
+      if(!file) return;
+      const reader = new FileReader();
+      reader.onload = function(ev){
+        const uploadArea = document.getElementById('uploadArea');
+        uploadArea.innerHTML = '';
+        const img = document.createElement('img');
+        img.src = ev.target.result;
+        img.alt = 'Imagen subida de ejemplo';
+        uploadArea.appendChild(img);
+      }
+      reader.readAsDataURL(file);
+    });
+  </script>
+</body>
+</html>

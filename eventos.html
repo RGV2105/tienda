@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decoraciones — Productos</title>
+  <style>
+    :root{
+      --vino:#6b0f1a;
+      --blanco:#fff;
+      --negro:#111;
+    }
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#f8f8f8;
+      color:var(--negro);
+    }
+    header{
+      background:var(--vino);
+      color:var(--blanco);
+      padding:12px 20px;
+      text-align:center;
+      font-size:1.2rem;
+      font-weight:bold;
+    }
+    .grid{
+      max-width:1200px;
+      margin:20px auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      padding:0 20px;
+    }
+    .card{
+      background:var(--blanco);
+      border-radius:12px;
+      box-shadow:0 6px 16px rgba(0,0,0,0.08);
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      transition:transform .2s;
+    }
+    .card:hover{transform:translateY(-4px);}
+    .card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+    .card-body{
+      padding:15px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      flex-grow:1;
+    }
+    .precio{font-size:1.2rem;font-weight:bold;color:var(--vino);}
+    .btn{
+      background:var(--vino);
+      color:var(--blanco);
+      border:none;
+      padding:10px;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:bold;
+      text-align:center;
+    }
+    .btn:hover{background:#900;}
+  </style>
+</head>
+<body>
+  <header>Decoraciones</header>
+
+  <section class="grid">
+    <!-- Tarjeta 1 -->
+    <div class="card">
+      <img src="Picsart_25-06-29_01-50-29-389.png" alt="Decoración 1">
+      <div class="card-body">
+        <h3>Decoración Bautizo</h3>
+        <p>referecia</p>
+        <div class="precio">$50</div>
+        <button class="btn" onclick="pagar('Decoración Cumpleaños', 50)">Pagar ahora</button>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="card">
+      <img src="Picsart_25-05-08_12-11-18-295.png" alt="Decoración 2">
+      <div class="card-body">
+        <h3>Decoración Cumpleaños</h3>
+        <p>referecia</p>
+        <div class="precio">$120</div>
+        <button class="btn" onclick="pagar('Decoración Bodas', 120)">Pagar ahora</button>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="card">
+      <img src="Picsart_25-06-18_07-45-01-890.jpg" alt="Decoración 3">
+      <div class="card-body">
+        <h3>Decoración Infantil</h3>
+        <p>referecia</p>
+        <div class="precio">$80</div>
+        <button class="btn" onclick="pagar('Decoración Infantil', 80)">Pagar ahora</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function pagar(nombre, precio){
+      // Aquí puedes integrar PayPal, MercadoPago o WhatsApp.
+      // Ejemplo simple con alerta:
+      alert("Vas a pagar: " + nombre + " ($" + precio + ")");
+      
+      // Ejemplo abrir WhatsApp directo con el pedido:
+      // window.open("https://wa.me/593XXXXXXXXX?text=Quiero comprar: "+nombre+" por $" + precio, "_blank");
+    }
+  </script>
+</body>
+</html>
